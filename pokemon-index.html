@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon APP</title>
+    <link rel="stylesheet" href="pokemon-style.css">
+</head>
+<body id="no-scroll" onload="init()">
+
+    <header>
+        <div class="header-content">
+            <img src="img/pokemon.png" alt="PokemonLogo">
+            <h1>Pokedex</h1>
+            <div class="search-container">
+                <input type="text" placeholder="Suche dein Pokemon"><button>Jage das Pokemon</button>
+                <img src="img/pokeball.png" alt="Pokeball">
+             </div>
+        </div>
+    </header>
+
+    <section class="bg-navy">
+
+        <div id="loading-spinner" class="spinner">
+
+        </div>
+
+        <div class="content" id="content">
+
+        </div>
+
+        <div class="load-more-button" id="load-more-button">
+        </div>
+
+        
+
+    </section>
+
+    <div id="overlayer" class="dialog d-none">
+        <div onclick="closeDialog()" class="close-Button">X</div>
+        <div class="show-single-card">
+            <h1>Karte</h1>
+        </div>
+
+    </div>
+
+
+
+    <footer>
+        <div class="footer">
+            Pokedex
+        </div>
+    </footer>
+
+    
+
+    <script src="pokemon-script.js"></script>
+    <script src="template.js"></script>
+</body>
+</html>

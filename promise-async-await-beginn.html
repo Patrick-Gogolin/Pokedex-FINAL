@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+
+        let promError = false;
+
+        function getPromise() {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    console.log("1")
+                    if (promError) {
+                        reject("hat nicht geklappt");
+                    } else {
+                        resolve("hat geklappt"); // hier könnte dann theoretisch ein Objekt rausgegeben werden, welches die Datenbank ausgegeben hat 
+                    }
+                }, 2000);
+            });
+        }
+
+        function getPromise2() {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    console.log("2")
+                    if (promError) {
+                        reject("hat nicht geklappt");
+                    } else {
+                        resolve("hat geklappt"); // hier könnte dann theoretisch ein Objekt rausgegeben werden, welches die Datenbank ausgegeben hat 
+                    }
+                }, 2000);
+            });
+        }
+
+        function getPromise3() {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    console.log("3")
+                    if (!promError) {
+                        reject("hat nicht geklappt");
+                    } else {
+                        resolve("hat geklappt"); // hier könnte dann theoretisch ein Objekt rausgegeben werden, welches die Datenbank ausgegeben hat 
+                    }
+                }, 2000);
+            });
+        }
+
+        async function usePromise() {
+            try {
+                await getPromise();
+                await getPromise2();
+                await getPromise3();
+                console.log("juhu")
+            } catch (error) {
+                console.error(error)
+
+            }
+            console.log("ende")
+        }
+
+///////////////////////////////////////////////////////////////////////////////////////////// Alte Variante mit .then
+        function getGoodPromise() {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    console.log('good');
+                    resolve("done_good");
+                }, 1000);
+            });
+        }
+
+        function getBadPromise() {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    console.log('bad');
+                    resolve("done_bad");
+                }, 1000);
+            });
+        }
+
+
+        function oldVariante() {
+            getGoodPromise().then(
+                getBadPromise
+        ).then(
+            getGoodPromise
+        ).then(
+            (result) => {
+                console.log(result)
+            }
+
+        ).catch((error) => {
+            console.error(error)
+        })
+    }
+
+
+
+
+
+
+
+
+    </script>
+</head>
+
+<body onload="oldVariante()">
+    <h1>PromiseTest</h1>
+
+</body>
+
+</html>

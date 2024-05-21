@@ -1,0 +1,62 @@
+[
+    {
+        "likes": 56,
+        "isLiked": false,
+        "likeHeart": "img/herz.png",
+        "image": "img/dog6.jpg",
+        "comments": ["<b>Wuffi32:</b> Wie der Vater so der Sohn", "<b>Wuffi32:</b> Wie der Vater so der Sohn"],
+        "newcomments": [],
+        "names": ["Paddy96"],
+        "profilName": ["Paddy96"]
+    },
+    {
+        "likes": 44,
+        "isLiked": false,
+        "likeHeart": "img/herz.png",
+        "image": "img/dog7.jpg",
+        "comments": ["<b>Bello45:</b> Enjoy the sun"],
+        "newcomments": [],
+        "names": ["Paddy96"],
+        "profilName": ["Bob"]
+    },
+    {
+        "likes": 80,
+        "isLiked": false,
+        "likeHeart": "img/herz.png",
+        "image": "img/dog8.jpg",
+        "comments": ["<b>Ruffy92:</b> A piece of art"],
+        "newcomments": [],
+        "names": ["Paddy96"],
+        "profilName": ["Milo"]
+    },
+    {
+        "likes": 92,
+        "isLiked": false,
+        "likeHeart": "img/herz.png",
+        "image": "img/dog9.jpg",
+        "comments": ["<b>WauziMcWauz:</b> Smile Baby"],
+        "newcomments": [],
+        "names": ["Paddy96"],
+        "profilName": ["Mopsi"]
+    },
+    {
+        "likes": 108,
+        "isLiked": false,
+        "likeHeart": "img/herz.png",
+        "image": "img/dog10.jpg",
+        "comments": ["<b>Max:</b> My best friend"],
+        "newcomments": [],
+        "names": ["Paddy96"],
+        "profilName": ["Hunter"]
+    },
+    {
+        "likes": 78,
+        "isLiked": false,
+        "likeHeart": "img/herz.png",
+        "image": "img/dog1.jpg",
+        "comments": ["<b>Hunter:</b> Cant wait to hunt the delivery guy with you again!"],
+        "newcomments": [],
+        "names": ["Paddy96"],
+        "profilName": ["Max"]
+    }
+]
