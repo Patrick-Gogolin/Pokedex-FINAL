@@ -5,41 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokemon APP</title>
     <link rel="stylesheet" href="pokemon-style.css">
+    <link rel="icon" type="image/x-icon" href="/img/pokeball.png">
 </head>
 <body id="no-scroll" onload="init()">
 
     <header>
         <div class="header-content">
-            <img src="img/pokemon.png" alt="PokemonLogo">
-            <h1>Pokedex</h1>
-            <div class="search-container">
-                <input type="text" placeholder="Suche dein Pokemon"><button>Jage das Pokemon</button>
-                <img src="img/pokeball.png" alt="Pokeball">
-             </div>
+            <img class="header-pokemon-logo-image" src="img/pokemon.png" alt="PokemonLogo">
+            <img class="header-pokemonball-image" src="img/pokeball.png" alt="Pokeball">
         </div>
     </header>
 
     <section class="bg-navy">
+        <div class="inputfield-container">
+            <input oninput="filterNames()" id="search-input-field" type="text" placeholder="Suche dein Pokemon">
+        </div>
 
         <div id="loading-spinner" class="spinner">
+            <img src="img/pokeball.png" alt="Pokeball" class="spinner-image">
 
         </div>
 
-        <div class="content" id="content">
+        <div class="content-container" id="content">
 
         </div>
 
-        <div class="load-more-button" id="load-more-button">
+        <div class="load-more-button-container" id="load-more-button">
         </div>
-
-        
-
     </section>
 
     <div id="overlayer" class="dialog d-none">
         <div onclick="closeDialog()" class="close-Button">X</div>
-        <div class="show-single-card">
-            <h1>Karte</h1>
+        <div id="single-card-container" class="show-single-card">
+        </div>
+        <div id="mobile-switch-image-container" class="mobile-switch-image-container d-none">
+
         </div>
 
     </div>
@@ -47,8 +47,8 @@
 
 
     <footer>
-        <div class="footer">
-            Pokedex
+        <div class="footer-content">
+            <span><b>Pokedex</b></span>
         </div>
     </footer>
 
